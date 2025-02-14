@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: rgb(250, 246, 246);
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%; 
+    padding: 20px;
+}
+
+
+h1 {
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(152, 33, 33);
+    font-size: 40px;
+    margin: 0;
+    padding: 0; 
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+.letter {
+    width: 680px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 130px; 
+    margin-left: 300px;
+    display: block; 
+    max-width: 100%; 
+    cursor: pointer;
+}
+
+.letter:hover {
+    width: 695px;
+    height: 615px;
+    transition: .3s ease;
+    transition: .3s ease-in-out;
+
+}
+
+.hearts {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin-top: -490px;
+    margin-left: -440px;
+}
+
+.letter-open {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+
+    display: block; 
+    max-width: 100%; 
+    cursor: pointer;
+
+}
+
+.ask {
+    font-size: 40px;
+    text-wrap: wrap;
+    max-width: 190px;
+    rotate: -10deg;
+    margin-left: 65px;
+    margin-top: 160px;
+}
+
+.vinyl {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    margin-top: -500px;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.vinyl.active {
+ 
+    animation: spin 3s linear infinite;
+}
+
+
+.button {
+    position: absolute;
+    margin-top: -310px;
+    margin-left: 70px;
+    background: #ffffffbc;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    rotate: -10deg;
+    z-index: 5;
+    cursor: pointer;
+
+}
+
+.button:hover {
+    background-color: #5f1c1c8e;
+    transition: .4s;
+}
+.button-stop:hover {
+    background-color: #5f1c1c8e;
+    transition: .4s;
+}
+
+.button.hidden {
+ visibility: hidden;
+
+}
+
+
+.button-stop {
+    position: absolute;
+    margin-top: -310px;
+    margin-left: 70px;
+    background: #ffffffbc;
+    border: none;
+    padding: 10px;
+    border-radius: 30px;
+    font-family: "Lobster", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    rotate: -10deg;
+    z-index: 5;
+    cursor: pointer;
+    visibility: hidden;
+
+}
+
+.button-stop.shown {
+    visibility:visible;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+
+
+
+  /* adjusting for smaller devices */
+
+
+  @media (max-width: 800px) {
+    .container {
+      padding: 10px;
+    }
+
+    .letter {
+        width: 300px;
+        height: 300px;
+       
+        margin: 0 auto;
+        
+        display: block; 
+        max-width: 100%; 
+        cursor: pointer;
+        margin-top: 90px;
+    }
+
+    
+    h1 {
+        font-family: "Lobster", serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(152, 33, 33);
+        font-size: 40px;
+        text-align: center;
+        margin: 0; /* Remove margins */
+        padding: 0; /* Remove padding */
+       
+    }
+
+    .hearts {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        margin-top: -350px;
+        margin-left: 40px;
+    }
+
+        
+    .letter-open {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+
+        display: block; 
+        max-width: 100%; 
+        cursor: pointer;
+
+    }
+
+    .ask {
+        font-size: 20px;
+        rotate: -10deg;
+        margin-left: 25px;
+        margin-top: 90px;
+        text-wrap: wrap;
+        max-width: 100px;
+    }
+
+    .vinyl {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        margin-top: -250px;
+        margin-left: 10px;
+        transition: opacity 0.3s ease;
+    }
+
+    .vinyl.active {
+    
+        animation: spin 3s linear infinite;
+    }
+
+
+    .button {
+        position: absolute;
+        margin-top: -160px;
+        margin-left: 30px;
+        background: #ffffffbc;
+        border: none;
+        padding: 10px;
+        border-radius: 30px;
+        font-family: "Lobster", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        rotate: -10deg;
+        z-index: 5;
+        cursor: pointer;
+        color: rgb(109, 19, 19);
+
+
+    }
+
+    .button:hover {
+        background-color: #5f1c1c8e;
+        transition: .4s;
+        color: rgb(255, 255, 255);
+
+    }
+    .button-stop:hover {
+        background-color: #5f1c1c8e;
+        transition: .4s;
+        color: rgb(255, 255, 255);
+
+    }
+
+    .button.hidden {
+    visibility: hidden;
+
+    }
+
+
+    .button-stop {
+        color: rgb(109, 19, 19);
+        position: absolute;
+        margin-top: -160px;
+        margin-left: 30px;
+        background: #ffffffbc;
+        border: none;
+        padding: 10px;
+        border-radius: 30px;
+        font-family: "Lobster", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        rotate: -10deg;
+        z-index: 5;
+        cursor: pointer;
+        visibility: hidden;
+
+    }
+
+
+
+
+}
+
+
+
+
